@@ -21,7 +21,9 @@ export class ScoresComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.fetchScores()
+    setTimeout(() => {
+      this.fetchScores()
+    }, 3000);
   }
 
   fetchScores() {
