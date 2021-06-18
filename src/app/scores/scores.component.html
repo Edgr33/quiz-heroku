@@ -1,5 +1,11 @@
 <a class="btn btn-primary" href="/home">Volver</a>
 
+<div *ngIf="!scoreList" class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
 <div *ngIf="scoreList">
   <table class="table">
     <thead>
