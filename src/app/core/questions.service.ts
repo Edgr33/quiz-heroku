@@ -129,7 +129,7 @@ export class QuestionsService {
     },
     {
       text: '¿A qué paises tuvo que enfrentarse Chile en la guerra del Pacífico?',
-      option1: 'ARgentina y Paraguay',
+      option1: 'Argentina y Paraguay',
       option2: 'Uruguay y Colombia',
       option3: 'Cuba y Venezuela',
       option4: 'Perú y Bolivia',
