@@ -1,0 +1,110 @@
+<div class="d-flex justify-content-center">
+  <h2>Tu Puntaje</h2>
+</div>
+<div class="d-flex justify-content-center">
+  <h3>{{score}}</h3>
+</div>
+
+<!-- Caja de preguntas, timer e indicadores de respuesta correcta o incorrecta -->
+<div *ngIf="question" class="card border-primary">
+  <div class="card-body">
+    <h5 class="card-title">{{question.text}}</h5>
+    <div *ngIf="quizStatus === 'question'" class="d-flex justify-content-center">
+      <h4>{{timer}}</h4>
+    </div>
+    <div *ngIf="(quizStatus === 'nextQuestion' && correctAnswer) || 
+    (quizStatus === 'finished' && correctAnswer)" 
+    class="d-flex justify-content-center correct">
+      <h4>CORRECTO</h4>
+    </div>
+    <div *ngIf="(quizStatus === 'nextQuestion' && !correctAnswer) || 
+    (quizStatus === 'finished' && !correctAnswer)"  
+    class="d-flex justify-content-center incorrect">
+      <h4>INCORRECTO</h4>
+    </div>
+
+    <!-- Caja de respuestas -->
+    <div class="row">
+      <div class="col answer-border">
+        <div class="form-check">
+          <input [(ngModel)]="option" class="form-check-input" value="1" type="radio" name="options" id="answer1">
+          <label class="form-check-label" for="answer1">
+            {{question.option1}}
+          </label>
+        </div>
+      </div>
+      <div class="col answer-border">
+        <div class="form-check">
+          <input [(ngModel)]="option" class="form-check-input" value="2" type="radio" name="options" id="answer2">
+          <label class="form-check-label" for="answer2">
+            {{question.option2}}
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col answer-border">
+        <div class="form-check">
+          <input [(ngModel)]="option" class="form-check-input" value="3" type="radio" name="options" id="answer3">
+          <label class="form-check-label" for="answer3">
+            {{question.option3}}
+          </label>
+        </div>
+      </div>
+      <div class="col answer-border">
+        <div class="form-check">
+          <input [(ngModel)]="option" class="form-check-input" value="4" type="radio" name="options" id="answer4">
+          <label class="form-check-label" for="answer4">
+            {{question.option4}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Botones de accion -->
+<div *ngIf="quizStatus === 'question'" class="d-flex justify-content-center">
+  <button class="btn btn-success" (click)="answer()">Confirmar Respuesta</button>
+</div>
+<div *ngIf="quizStatus === 'nextQuestion' && questionCounter <= 9" class="d-flex justify-content-center">
+  <button class="btn btn-secondary" (click)="generateQuestion()">Continuar</button>
+</div>
+<!-- Boton de modal -->
+<div *ngIf="quizStatus === 'finished'" class="d-flex justify-content-center">
+  <a class="btn btn-secondary" href="/home">Reintentar</a>
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Enviar Puntaje
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ingresa tu nombre</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">Nombre</span>
+          <input [formControl]="nameField" 
+          [(ngModel)]="name" type="text"
+          [class.fcerror]="nameField.invalid && nameField.dirty" 
+          ria-describedby="addon-wrapping" 
+          class="form-control">
+        </div>
+        <div *ngIf="nameField.dirty">
+          <p class="error" *ngIf="nameField.hasError('required')">Campo requerido</p>
+          <p class="error" *ngIf="nameField.hasError('minlength')">Mínimo 3 caracteres</p>
+          <p class="error" *ngIf="nameField.hasError('maxlength')">Máximo 20 caracteres</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button class="btn btn-primary" [disabled]="nameField.invalid" (click)="saveScore()">ENVIAR</button>
+      </div>
+    </div>
+  </div>
+</div>

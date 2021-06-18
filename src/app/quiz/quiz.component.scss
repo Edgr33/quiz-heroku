@@ -1,0 +1,55 @@
+div.card {
+  width: 100%;
+  margin-top: 50px;
+}
+
+h5.card-title {
+  text-align: center;
+  background-color: #0d6efd;
+  color: white;
+  padding: 10px;
+}
+
+div.col {
+  padding: 5px 2px;
+  margin: 10px 10px;
+}
+
+.form-check {
+  padding-left: 2.5em;
+}
+
+.correct {
+  color: rgb(5, 165, 5);
+}
+
+.incorrect {
+  color: red;
+}
+
+.answer-border {
+  border: solid 1px blue;
+}
+
+button.btn {
+  margin-top: 10px;
+  float: middle;
+  margin-left: 8px;
+}
+
+a.btn {
+  margin-top: 10px;
+  float: middle;
+}
+
+.error {
+  color: red;
+}
+
+.form-control.fcerror:focus {
+  box-shadow: 0 0 0 0.25rem #f7000087;
+}
+
+.modal-content {
+  height: 265px;
+}
