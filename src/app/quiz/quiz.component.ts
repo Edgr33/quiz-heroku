@@ -56,6 +56,7 @@ export class QuizComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.generatequestionary()
     this.generateQuestion()
 
     this.nameField = new FormControl ('', [
@@ -63,6 +64,13 @@ export class QuizComponent implements OnInit {
       Validators.minLength(3),
       Validators.maxLength(20)
     ]);
+  }
+
+  generatequestionary() {
+    this.questionsService.category$
+    .subscribe(value => {
+      console.log(value)
+    })
   }
 
   generateQuestion() {
@@ -105,16 +113,19 @@ export class QuizComponent implements OnInit {
     // console.log(this.quizStatus)
   }
 
+  click: boolean = false
   saveScore() {
     let newScore: Score = {
       name: this.name,
       score: this.score
     }
 
+    this.click = true
+
     this.scoreService.createScore(newScore)
     .subscribe(data => {
       console.log(data)
+      this.router.navigate(['scores'])
     })
-    this.router.navigate(['scores'])
   }
 }

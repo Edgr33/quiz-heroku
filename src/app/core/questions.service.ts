@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Question } from '../question.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuestionsService {
+
+  private category = new BehaviorSubject<string>('history')
+
+  category$ = this.category.asObservable()
 
   allQuestions: Question[] = [
     {
@@ -169,5 +174,20 @@ export class QuestionsService {
     },
   ]
 
+  popQuestions: Question[] = [
+    {
+      text: '¿Que cantante es conocido como el rey del pop?',
+      option1: 'Michael Jackson',
+      option2: 'Prince',
+      option3: 'Eric Jhonson',
+      option4: 'Bob Marley',
+      answer: '1'
+    },
+  ]
+
   constructor() { }
+
+  changeCategory(type: string) {
+    this.category.next(type)
+  }
 }
