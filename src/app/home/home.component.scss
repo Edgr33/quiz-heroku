@@ -6,11 +6,48 @@ h1 {
   text-transform: uppercase;
 }
 
-a.col {
-  margin-top: 25%;
+.category-select {
+  margin-top: 25px;
+}
+
+select {
+  width: 75%;
+}
+
+.categories {
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 15px;
+}
+
+.last-cat {
+  border-right: 2px solid black;
+}
+
+.category-box {
+  margin-top: 25px;
+}
+
+img {
+  height: 150px;
+  margin-top: 10px;
+}
+
+.checkboxgroup{
+  display:inline-block;
+  text-align:center;
+}
+.checkboxgroup label {
+  display:block;
+}
+
+button.col {
+  margin-top: 25px;
   padding: 15px 0;
 }
 
-a.btn {
+button.btn {
   color: white;
 }
+

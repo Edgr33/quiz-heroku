@@ -18,7 +18,7 @@ export class QuizComponent implements OnInit {
   option: any
 
   //array de preguntas
-  allQuestions: Question[] = this.questionsService.allQuestions
+  allQuestions: Question[]
 
   //numero al azar para seleccionar pregunta
   questionRandomizer: number
@@ -57,7 +57,7 @@ export class QuizComponent implements OnInit {
 
   ngOnInit(): void {
     this.generatequestionary()
-    this.generateQuestion()
+    
 
     this.nameField = new FormControl ('', [
       Validators.required,
@@ -67,9 +67,24 @@ export class QuizComponent implements OnInit {
   }
 
   generatequestionary() {
+    let category: string
+
     this.questionsService.category$
     .subscribe(value => {
       console.log(value)
+      category = value
+
+      switch(category) {
+        case 'history': this.allQuestions = this.questionsService.historyQuestions
+        break;
+        case 'music': this.allQuestions = this.questionsService.musicQuestions
+        break;
+        case 'nerd': this.allQuestions = this.questionsService.nerdQuestions
+        break;
+        case 'tv': this.allQuestions = this.questionsService.TVQuestions
+      }
+
+      this.generateQuestion()
     })
   }
 

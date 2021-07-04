@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { QuestionsService } from '../core/questions.service';
 
 @Component({
@@ -8,22 +9,29 @@ import { QuestionsService } from '../core/questions.service';
 })
 export class HomeComponent implements OnInit {
 
+  category: string = 'history'
+
+  categoryArr = this.questionService.categoryArr
+
   constructor(
-    private questionService: QuestionsService
+    private questionService: QuestionsService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   }
 
-  checkCategory() {
-    this.questionService.category$
-    .subscribe(value => {
-      console.log(value)
-    })
-  }
+  // checkCategory() {
+  //   this.questionService.category$
+  //   .subscribe(value => {
+  //     console.log(value)
+  //   })
+  // }
 
   selectCategory(type: string) {
     this.questionService.changeCategory(type)
+
+    this.router.navigate(['quiz'])
   }
 
 }

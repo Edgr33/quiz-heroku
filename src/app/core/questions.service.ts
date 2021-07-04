@@ -6,12 +6,31 @@ import { Question } from '../question.model';
   providedIn: 'root'
 })
 export class QuestionsService {
+  
+  categoryArr = [
+    {
+    title: 'history',
+    fullName: 'Historia de Chile'
+    },
+    {
+    title: 'music',
+    fullName: 'Música'
+    },
+    {
+    title: 'tv',
+    fullName: 'Cultura Pop y TV'
+    },
+    {
+    title: 'nerd',
+    fullName: 'Cultura Nerd'
+    },
+  ]
 
   private category = new BehaviorSubject<string>('history')
 
   category$ = this.category.asObservable()
 
-  allQuestions: Question[] = [
+  historyQuestions: Question[] = [
     {
       text: '¿Qué hecho histórico se conmemora el 18 de septiembre?',
       option1: 'Combate naval de Iquique',
@@ -174,15 +193,493 @@ export class QuestionsService {
     },
   ]
 
-  popQuestions: Question[] = [
+  musicQuestions: Question[] = [
     {
       text: '¿Que cantante es conocido como el rey del pop?',
       option1: 'Michael Jackson',
       option2: 'Prince',
-      option3: 'Eric Jhonson',
+      option3: 'Eric Clapton',
       option4: 'Bob Marley',
       answer: '1'
     },
+    {
+      text: '¿A qué presidente Estadounidense le cantó Madonna para su cumpleaños?',
+      option1: 'Bill Clinton',
+      option2: 'John Kennedy',
+      option3: 'George W. Bush',
+      option4: 'Joe Biden',
+      answer: '2'
+    },
+    {
+      text: '¿De qué país son originarios los Beatles?',
+      option1: 'Escocia',
+      option2: 'Estados Unidos',
+      option3: 'Inglaterra',
+      option4: 'Australia',
+      answer: '3'
+    },
+    {
+      text: '¿Cual es el nombre del album debut de la cantante Britney Spears?',
+      option1: 'Oops!... I Did It Again',
+      option2: 'Toxic',
+      option3: 'Circus',
+      option4: ' ...Baby One More Time',
+      answer: '4'
+    },
+    {
+      text: '¿Cuál es la canción más reproducida en Spotify hasta el momento?',
+      option1: 'Ed Sheeran, The Shape of You',
+      option2: 'Luis Fonsi, Despacito',
+      option3: "Dua Lipa, Don't Start Now",
+      option4: 'Maluma, Hawái',
+      answer: '1'
+    },
+    {
+      text: '¿Qué banda americana se llamaba originalmente, “Kara’s Flowers”?',
+      option1: 'The Doors',
+      option2: 'Maroon 5',
+      option3: 'Artic Monkeys',
+      option4: 'Nirvana',
+      answer: '2'
+    },
+    {
+      text: '¿Cuál de los siguientes artistas tiene como nombre real, Ramón Luis Ayala Rodríguez?',
+      option1: 'Maluma',
+      option2: 'Don Omar',
+      option3: 'Daddy Yankee',
+      option4: 'Tito El Bambino',
+      answer: '3'
+    },
+    {
+      text: '¿En que país nació el cantante Ricardo Arjona?',
+      option1: 'Colombia',
+      option2: 'Puerto Rico',
+      option3: 'México',
+      option4: 'Guatemala',
+      answer: '4'
+    },
+    {
+      text: '¿A cuál de los siguientes cantantes pertenece la canción, "Despacito"?',
+      option1: 'Luis Fonsi',
+      option2: 'Maluma',
+      option3: 'Bad Bunny',
+      option4: 'Calle 13',
+      answer: '1'
+    },
+    {
+      text: 'Cuántos premios Grammy ha ganado Taylor Swift¿?',
+      option1: '5',
+      option2: '10',
+      option3: '3',
+      option4: '14',
+      answer: '2'
+    },
+    {
+      text: '¿Qué banda tiene más premios Grammy en toda la historia?',
+      option1: 'Dixie Chicks',
+      option2: 'Metallica',
+      option3: 'U2',
+      option4: 'Maroon 5',
+      answer: '3'
+    },
+    {
+      text: '¿Cuál es la canción que ha durado más tiempo en el #1 en las listas de éxitos de Estados Unidos?',
+      option1: '"Someone Like You" de Adele',
+      option2: '"Thinking Out Loud" de Ed Sheeran',
+      option3: `"Don't Stop Believin'" de Journey`,
+      option4: '"Old Town Road" de Lil Nas X',
+      answer: '4'
+    },
+    {
+      text: '¿Qué artista popular nunca ha ganado un Grammy?',
+      option1: 'Katy Perry',
+      option2: 'Rihanna',
+      option3: 'Justin Bieber',
+      option4: 'Dua Lipa',
+      answer: '1'
+    },
+    {
+      text: '¿Cuántos años tenía Lady Gaga cuando lanzó su primer éxito, "Just Dance"?',
+      option1: '21',
+      option2: '22',
+      option3: '18',
+      option4: '30',
+      answer: '2'
+    },
+    {
+      text: '¿Qué cantante es considerado “El Rey del Rock and Roll”?',
+      option1: 'Eric Clapton',
+      option2: 'Jimi Hendrix',
+      option3: 'Elvis Presley.',
+      option4: 'Axl Rose',
+      answer: '3'
+    },
+    {
+      text: '¿Qué rockero es recordado por haber “incendiado” su guitarra?',
+      option1: 'Slash',
+      option2: 'Dave Mustaine',
+      option3: 'Steve Vai',
+      option4: 'Jimi Hendrix.',
+      answer: '4'
+    },
+    {
+      text: '¿De quién es la famosa canción de rock Stairway to Heaven?',
+      option1: 'Led Zeppelin',
+      option2: `Guns N' Roses`,
+      option3: 'Pink Floyd',
+      option4: 'Eagles',
+      answer: '1'
+    },
+    {
+      text: '¿A qué banda pertenece el bajista y vocalista Lemmy Kilmister?',
+      option1: 'Disturbed',
+      option2: 'Motorhead',
+      option3: 'System of a Down',
+      option4: 'Led Zeppelin',
+      answer: '2'
+    },
+    {
+      text: '¿Quién fue el primer guitarrista de Metallica junto a James Hetfield?',
+      option1: 'Kirk Hammett',
+      option2: 'Cliff Burton',
+      option3: 'Ron McGovney',
+      option4: 'Dave Mustaine',
+      answer: '3'
+    },
+    {
+      text: '¿Qué instrumento musical tocaba Angus Young de la banda de rock AC/DC?',
+      option1: 'Bajo',
+      option2: 'Teclado',
+      option3: 'Bateria',
+      option4: 'Guitarra Eléctrica',
+      answer: '4'
+    },
+  ]
+
+  nerdQuestions: Question[] = [
+    {
+      text: '¿Como se llama la estación espacial imperial mas fuerte en la saga de Star Wars?',
+      option1: 'Estrella de la muerte',
+      option2: 'Destructor Estelar',
+      option3: 'Lanzadera imperial',
+      option4: 'Supremacy',
+      answer: '1'
+    },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '2'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '3'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '4'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '1'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '2'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '3'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '4'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '1'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '2'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '3'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '4'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '1'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '2'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '3'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '4'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '1'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '2'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '3'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '4'
+    // },
+  ]
+
+  TVQuestions: Question[] = [
+    {
+      text: '¿Qué artista es el que más veces ha visitado el festival de Viña ',
+      option1: 'Gloria Benavides',
+      option2: 'Miguel Bosé',
+      option3: 'Chayanne',
+      option4: 'La Ley',
+      answer: '1'
+    },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '2'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '3'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '4'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '1'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '2'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '3'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '4'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '1'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '2'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '3'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '4'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '1'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '2'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '3'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '4'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '1'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '2'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '3'
+    // },
+    // {
+    //   text: '¿?',
+    //   option1: '',
+    //   option2: '',
+    //   option3: '',
+    //   option4: '',
+    //   answer: '4'
+    // },
   ]
 
   constructor() { }

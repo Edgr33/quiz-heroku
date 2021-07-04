@@ -1,11 +1,43 @@
 <h1 class="d-flex justify-content-center">Proyecto Quiz</h1>
 
-<div class="row">
-  <a class="col col-lg-2 offset-lg-5 btn btn-primary test" routerLink="/quiz">Ir al Quiz</a>
+<div class="d-flex justify-content-center d-block d-lg-none category-select">
+  <h4>Selecciona una categoria</h4>
+  <select class="form-select" [(ngModel)]="category" name="" id="">
+    <option [ngValue]="item.title" *ngFor="let item of categoryArr">{{item.fullName}}</option>
+  </select>
 </div>
 
-<button (click)="checkCategory()">check</button>
+<div class="row category-box d-none d-lg-flex">
+  <div class="col categories checkboxgroup">
+    <label class="form-check-label" for="category1">
+      <h4>Historia de Chile</h4>
+      <p><img src="../../assets/category1.jpg" alt="category-img"></p>
+    </label>
+    <input [(ngModel)]="category" class="form-check-input" value="history" type="radio" name="options" id="category1">
+  </div>
+  <div class="col categories checkboxgroup">
+    <label class="form-check-label" for="category2">
+      <h4>Música</h4>
+      <p><img src="./../assets/category2.jpg" alt="category-img"></p>
+    </label>
+    <input [(ngModel)]="category" class="form-check-input" value="music" type="radio" name="options" id="category2">
+  </div>
+  <div class="col categories checkboxgroup">
+    <label class="form-check-label" for="category3">
+      <h4>Cultura Pop y TV</h4>
+      <p><img src="./../assets/category3.jpg" alt="category-img"></p>
+    </label>
+    <input [(ngModel)]="category" class="form-check-input" value="tv" type="radio" name="options" id="category3">
+  </div>
+  <div class="col categories last-cat checkboxgroup">
+    <label class="form-check-label" for="category4">
+      <h4>Cultura Nerd</h4>
+      <p><img src="./../assets/category4.jpg" alt="category-img"></p>
+    </label>
+    <input [(ngModel)]="category" class="form-check-input" value="nerd" type="radio" name="options" id="category4">
+  </div>
+</div>
 
-<button (click)="selectCategory('pop')">change</button>
-<button (click)="selectCategory('music')">change</button>
-<button (click)="selectCategory('games')">change</button>
+<div class="row">
+  <button (click)="selectCategory(category)" class="col col-lg-2 offset-lg-5 btn btn-primary test">Ir al Quiz</button>
+</div>
