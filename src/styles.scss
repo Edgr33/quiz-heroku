@@ -7,3 +7,32 @@
 .modal {
   background: rgba(0,0,0,0.5);
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-radio-outer-circle {
+  border-color: black;
+}
+  
+.mat-radio-inner-circle {
+  background-color: black;
+}
+  
+.mat-radio-ripple .mat-ripple-element {
+  background-color: black;
+}
+
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+  border-color:#DB8200; 
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+  color:#DB8200;
+  background-color:#DB8200;
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color:#DB8200;
+}

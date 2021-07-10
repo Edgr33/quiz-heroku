@@ -1,13 +1,23 @@
 <h1 class="d-flex justify-content-center">Proyecto Quiz</h1>
 
 <div class="d-flex justify-content-center d-block d-lg-none category-select">
-  <h4>Selecciona una categoria</h4>
-  <select class="form-select" [(ngModel)]="category" name="" id="">
+  <h4>Selecciona una categoría</h4>
+  <!-- <select class="form-select" [(ngModel)]="category" name="" id="">
     <option [ngValue]="item.title" *ngFor="let item of categoryArr">{{item.fullName}}</option>
-  </select>
+  </select> -->
+  <mat-form-field appearance="fill">
+    <mat-label>Categorías</mat-label>
+    <mat-select [(ngModel)]="category">
+      <mat-option [value]="item.title" *ngFor="let item of categoryArr">{{item.fullName}}</mat-option>
+    </mat-select>
+  </mat-form-field>
 </div>
 
-<div class="row category-box d-none d-lg-flex">
+
+<div class="d-flex justify-content-center d-none d-lg-flex category-title">
+  <h4 class="sub-title">Selecciona una categoría</h4>
+</div>
+<div class="d-none d-lg-flex">
   <div class="col categories checkboxgroup">
     <label class="form-check-label" for="category1">
       <h4>Historia de Chile</h4>

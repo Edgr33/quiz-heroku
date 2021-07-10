@@ -203,11 +203,11 @@ export class QuestionsService {
       answer: '1'
     },
     {
-      text: '¿A qué presidente Estadounidense le cantó Madonna para su cumpleaños?',
-      option1: 'Bill Clinton',
-      option2: 'John Kennedy',
-      option3: 'George W. Bush',
-      option4: 'Joe Biden',
+      text: '¿Cuál es el nombre de la banda que escribió la canción "Hotel California"?',
+      option1: 'Journey',
+      option2: 'Eagles',
+      option3: 'Led Zeppelin',
+      option4: 'Aerosmith',
       answer: '2'
     },
     {
@@ -356,6 +356,169 @@ export class QuestionsService {
     },
   ]
 
+  TVQuestions: Question[] = [
+    {
+      text: '¿Qué artista es el que más veces ha visitado el festival de Viña del Mar',
+      option1: 'Gloria Benavides',
+      option2: 'Miguel Bosé',
+      option3: 'Chayanne',
+      option4: 'La Ley',
+      answer: '1'
+    },
+    {
+      text: '¿A qué presidente Estadounidense le cantó Madonna para su cumpleaños?',
+      option1: 'Bill Clinton',
+      option2: 'John Kennedy',
+      option3: 'George W. Bush',
+      option4: 'Joe Biden',
+      answer: '2'
+    },
+    {
+      text: '¿De qué trata la galardonada serie de AMC, “The Walking Dead”?',
+      option1: 'Un grupo de vampiros jóvenes que aterrorizan a una pequeña ciudad',
+      option2: 'Rebeldes en una sociedad antiutópica donde están prohibidos los libros',
+      option3: 'Sobrevivientes de un apocalipsis de zombies',
+      option4: 'Sobrevivientes de un evento similar al rapto donde la mitad de la humanidad desaparece',
+      answer: '3'
+    },
+    {
+      text: '¿De las novelas de cuál autor está adaptada la serie de HBO “Game of Thrones”?',
+      option1: 'J.R.R. Tolkien',
+      option2: 'E.L. James',
+      option3: 'J.D. Robb',
+      option4: 'George R.R. Martin',
+      answer: '4'
+    },
+    {
+      text: '¿En cuál de las siguientes peliculas no participo el actor Leonardo DiCaprio?',
+      option1: 'Día de entrenamiento',
+      option2: 'Titanic',
+      option3: 'El lobo de Wall Street',
+      option4: 'Django sin cadenas',
+      answer: '1'
+    },
+    {
+      text: '¿Cuál es el nombre del teniente de pelotón de Forrest en la película "Forrest Gump"?',
+      option1: 'James Francis',
+      option2: 'Dan Taylor',
+      option3: 'William Hill',
+      option4: 'Michael Horvarth',
+      answer: '2'
+    },
+    {
+      text: '¿En que pais fue producida la telenovela llamada "Qué culpa tiene Fatmagül"?',
+      option1: 'India',
+      option2: 'Palestina',
+      option3: 'Turquia',
+      option4: 'Malasia',
+      answer: '3'
+    },
+    {
+      text: '¿Quiénes fueron los animadores del festival de Viña en el año 2005, luego de que Antonio Vodanovic anunciara su retiro?',
+      option1: 'Sergio Lagos y Myriam Hernández',
+      option2: 'Felipe Camiroaga y Soledad Onetto',
+      option3: 'Rafael Araneda y Eva Gómez',
+      option4: 'Ricardo Montaner y Myriam Hernández',
+      answer: '4'
+    },
+    {
+      text: '¿Cuál es el nombre del personaje protagonizado por Vin Diesel en la serie de películas "Rapido y Furioso"?',
+      option1: 'Dominic Toretto',
+      option2: 'Sean Boswell',
+      option3: `Brian O'Conner`,
+      option4: 'Luke Hobbs',
+      answer: '1'
+    },
+    {
+      text: '¿En que departamento de hospital trabaja el doctor Gregory House, de la serie "Dr. House"?',
+      option1: 'Pediatría',
+      option2: 'Diagnóstico',
+      option3: 'Oncología',
+      option4: 'Cirugía',
+      answer: '2'
+    },
+    {
+      text: '¿Cuál es nombre de la raza de Frodo Bolsón, protagonista de la serie de películas "El Señor de los Anillos"?',
+      option1: 'Elfo',
+      option2: 'Duende',
+      option3: 'Hobbit',
+      option4: 'Orco',
+      answer: '3'
+    },
+    {
+      text: '¿Cuál fué la primera película que protagonizó el actor Dwayne Johnson, más conocido por su apodo "La Roca"?',
+      option1: 'Rápido y Furioso',
+      option2: 'Doom: la puerta del infierno',
+      option3: 'Un espía y medio',
+      option4: 'El rey Escorpión',
+      answer: '4'
+    },
+    {
+      text: '¿Cuál de los siguientes personajes no fué caracterizado por el rostro televisivo chileno, Felipe Camiroaga?',
+      option1: 'Yerko Puchento',
+      option2: 'Luciano Bello ',
+      option3: 'El Washington',
+      option4: 'El Charro que Canta Bonito',
+      answer: '1'
+    },
+    {
+      text: '¿Cuál era el apodo del animador del programa "Cachureos", Marcelo Hernández?',
+      option1: 'Señor Lapiz',
+      option2: 'Cabezón',
+      option3: 'Epidemia',
+      option4: 'Gato Juanito',
+      answer: '2'
+    },
+    {
+      text: '¿Cuántos años duró al aire el programa "Video Loco"?',
+      option1: '3 años',
+      option2: '8 años',
+      option3: '11 años',
+      option4: '18 años',
+      answer: '3'
+    },
+    {
+      text: 'La película "Una mujer fantástica" es la primera cinta chilena en obtener el Oscar a la Mejor Película Extranjera. ¿Quién es su director?',
+      option1: 'Pablo Larraín',
+      option2: 'Sebastián Silva',
+      option3: 'Silvio Caiozzi',
+      option4: 'Sebastián Lelio',
+      answer: '4'
+    },
+    {
+      text: '¿Cuál de los siguientes personajes del cómic e historias chilenas aún no ha llegado a la pantalla grande?',
+      option1: 'Barrabases',
+      option2: 'Condorito',
+      option3: 'Mampato',
+      option4: 'Papelucho',
+      answer: '1'
+    },
+    {
+      text: '¿En qué teleserie chilena, Álvaro Rudolphy interpretó a dos personajes? ',
+      option1: 'Borrón y cuenta nueva',
+      option2: 'Amores de Mercado',
+      option3: 'Aquelarre',
+      option4: 'Romané',
+      answer: '2'
+    },
+    {
+      text: '¿Cuál de estas teleseries se convirtió en la más larga de la historia de la TV en Chile? ',
+      option1: 'Perdona Nuestros Pecados',
+      option2: 'Quien',
+      option3: 'Verdades Ocultas',
+      option4: '¿Dónde está Elisa?',
+      answer: '3'
+    },
+    {
+      text: '¿Cuál de los hermanos Mercader en Machos interpretaba a un gay?',
+      option1: 'Amaro Mercader',
+      option2: 'Álex Mercader',
+      option3: 'Armando Mercader',
+      option4: 'Ariel Mercader',
+      answer: '4'
+    },
+  ]
+
   nerdQuestions: Question[] = [
     {
       text: '¿Como se llama la estación espacial imperial mas fuerte en la saga de Star Wars?',
@@ -365,322 +528,161 @@ export class QuestionsService {
       option4: 'Supremacy',
       answer: '1'
     },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '2'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '3'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '4'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '1'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '2'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '3'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '4'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '1'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '2'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '3'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '4'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '1'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '2'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '3'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '4'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '1'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '2'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '3'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '4'
-    // },
-  ]
-
-  TVQuestions: Question[] = [
     {
-      text: '¿Qué artista es el que más veces ha visitado el festival de Viña ',
-      option1: 'Gloria Benavides',
-      option2: 'Miguel Bosé',
-      option3: 'Chayanne',
-      option4: 'La Ley',
+      text: '¿Cuál de los siguientes guerreros Jedi de la saga Star Wars se convirtió en el villano Darth Vader?',
+      option1: 'Qui-Gon Jinn',
+      option2: 'Anakin Skywalker',
+      option3: 'Obi-Wan Kenobi',
+      option4: 'Mace Windu',
+      answer: '2'
+    },
+    {
+      text: '¿Cuál es el nombre del hermano de Mario, de la serie de videojuegos "Mario Bros"?',
+      option1: 'Wario',
+      option2: 'Koppa',
+      option3: 'Luigi',
+      option4: 'Toad',
+      answer: '3'
+    },
+    {
+      text: '¿Qué pokemon fué el primer compañero del personaje Ash Ketchum en la serie de animación "Pokemon"?',
+      option1: 'Charmander',
+      option2: 'Butterfly',
+      option3: 'Pidgeotto',
+      option4: 'Pikachu',
+      answer: '4'
+    },
+    {
+      text: '¿Cuál es el nombre de la compañia desarrolladora de videojuegos que creó la franquicia "Persona"?',
+      option1: 'Atlus',
+      option2: 'Fromsoft',
+      option3: 'Bandai',
+      option4: 'Squaresoft',
       answer: '1'
     },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '2'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '3'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '4'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '1'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '2'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '3'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '4'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '1'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '2'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '3'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '4'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '1'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '2'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '3'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '4'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '1'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '2'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '3'
-    // },
-    // {
-    //   text: '¿?',
-    //   option1: '',
-    //   option2: '',
-    //   option3: '',
-    //   option4: '',
-    //   answer: '4'
-    // },
+    {
+      text: '¿Cuál de los siguientes personajes no es un villano de la serie de animación "Dragon Ball"?',
+      option1: 'Freezer',
+      option2: 'Orochimaru',
+      option3: 'Majin-Boo',
+      option4: 'Cell',
+      answer: '2'
+    },
+    {
+      text: '¿Cómo era conocido el grupo de caballeros protagonistas en la serie de animacion "Caballeros del Zodiaco"?',
+      option1: 'Caballeros de Plata',
+      option2: 'Caballeros Dorados',
+      option3: 'Caballeros de Bronce',
+      option4: 'Caballeros Legendarios',
+      answer: '3'
+    },
+    {
+      text: '¿Quiénes fueron los primeros 2 acompañantes del protagonista, en el videojuego titulado "Kingdom Hearts"?',
+      option1: 'Hércules y Aladdin',
+      option2: 'Simba y Tarzán',
+      option3: 'Mickey y Pluto',
+      option4: 'Donald y Goofy',
+      answer: '4'
+    },
+    {
+      text: '¿Cuál es la temática de la serie de videojuegos conocida como "Ace Combat"?',
+      option1: 'Simulación de combates aéreos ',
+      option2: 'Deportes extremos',
+      option3: 'Carreras de autos',
+      option4: 'Guerras intergalácticas',
+      answer: '1'
+    },
+    {
+      text: '¿Cuál es el nombre del protagonista de la serie de videojuegos conocida como "The Legend of Zelda"?',
+      option1: 'Ganondorf',
+      option2: 'Link',
+      option3: 'Sheik',
+      option4: 'Zelda',
+      answer: '2'
+    },
+    {
+      text: '¿En qué escenario esta basada la primera entrega de la serie de videojuegos "God of War"?',
+      option1: 'Mitología Romana',
+      option2: 'Mitología Egipcia',
+      option3: 'Mitología Griega',
+      option4: 'Mitología Indú',
+      answer: '3'
+    },
+    {
+      text: '¿Qué compañia fué la creadora del juego de cartas "Mitos y Leyendas"?',
+      option1: 'Hasbro',
+      option2: 'Wizards of the Coast',
+      option3: 'Panini',
+      option4: 'Salo',
+      answer: '4'
+    },
+    {
+      text: '¿Qué nombre se le dió a la primera edición del juego de cartas chileno "Mitos y Leyendas"?',
+      option1: 'El Reto',
+      option2: 'La Cofradía',
+      option3: 'La Ira del Nahual',
+      option4: 'Espiritu de Dragón',
+      answer: '1'
+    },
+    {
+      text: '¿Cuál es la identidad ficticia que utiliza el superheroe Superman?',
+      option1: 'Peter Parker',
+      option2: 'Clark Kent',
+      option3: 'Bruce Banner',
+      option4: 'Tony Stark',
+      answer: '2'
+    },
+    {
+      text: '¿Cuál es el poder del fundador de los X-Men, Charles Xavier, más conocido como Profesor X?',
+      option1: 'Invisibilidad',
+      option2: 'Teletransportación',
+      option3: 'Telepatía',
+      option4: 'Superfuerza',
+      answer: '3'
+    },
+    {
+      text: '¿Cuál de los siguientes artefactos no forma parte del universo de Marvel?',
+      option1: 'El Teseracto',
+      option2: 'Guantelete del Infinito',
+      option3: 'La Gema del Alma',
+      option4: 'Las Esferas del Dragón',
+      answer: '4'
+    },
+    {
+      text: '¿Cuál es el nombre del villano que logra reunir las Gemas del Infinito en el universo cinematográfico de Marvel?',
+      option1: 'Thanos',
+      option2: 'Doctor Muerte',
+      option3: 'Apocalipsis',
+      option4: 'Loki',
+      answer: '1'
+    },
+    {
+      text: '¿Cuál de las siguientes compañias tecnológicas no se ha dedicado nunca a la produccion de consolas de videojuegos?',
+      option1: 'Microsoft',
+      option2: 'Apple',
+      option3: 'Sony',
+      option4: 'Google',
+      answer: '2'
+    },
+    {
+      text: '¿Cuál es el nombre de la Consola de octava generación desarrollada por Nintendo y lanzada a la venta el año 2017?',
+      option1: 'Super Nintendo',
+      option2: 'Nintendo 64',
+      option3: 'Nintendo Switch',
+      option4: 'GameCube',
+      answer: '3'
+    },
+    {
+      text: '¿Cuál de las siguientes razas no pertenece al universo de "Starcraft"?',
+      option1: 'Zerg',
+      option2: 'Cryons',
+      option3: 'Terran',
+      option4: 'Protoss',
+      answer: '2'
+    },
   ]
+
+
 
   constructor() { }
 

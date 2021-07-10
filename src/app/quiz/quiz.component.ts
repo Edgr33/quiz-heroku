@@ -143,4 +143,8 @@ export class QuizComponent implements OnInit {
       this.router.navigate(['scores'])
     })
   }
+
+  pickOption (answer: string) {
+    this.option = answer
+  }
 }

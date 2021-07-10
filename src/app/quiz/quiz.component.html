@@ -1,3 +1,4 @@
+<a class="btn btn-primary" href="/home">Volver</a>
 <div class="d-flex justify-content-center">
   <h2>Tu Puntaje</h2>
 </div>
@@ -6,7 +7,7 @@
 </div>
 
 <!-- Caja de preguntas, timer e indicadores de respuesta correcta o incorrecta -->
-<div *ngIf="question" class="card border-primary">
+<div *ngIf="question" class="card">
   <div class="card-body">
     <h5 class="card-title">{{question.text}}</h5>
     <div *ngIf="quizStatus === 'question'" class="d-flex justify-content-center">
@@ -24,42 +25,52 @@
     </div>
 
     <!-- Caja de respuestas -->
-    <div class="row">
-      <div class="col answer-border">
-        <div class="form-check">
-          <input [(ngModel)]="option" class="form-check-input" value="1" type="radio" name="options" id="answer1">
-          <label class="form-check-label" for="answer1">
-            {{question.option1}}
-          </label>
+    <mat-radio-group [(ngModel)]="option">
+      <div class="d-lg-flex">
+        <div class="answer answer-border-top" (click)="pickOption('1')">
+          <!-- <div class="form-check">
+            <input [(ngModel)]="option" class="form-check-input" value="1" type="radio" name="options" id="answer1">
+            <label class="form-check-label" for="answer1">
+              {{question.option1}}
+            </label>
+          </div> -->
+          <mat-radio-button aria-label="answer1" id="answer1" [value]="'1'"></mat-radio-button>
+          <span class="answer-text">{{question.option1}}</span>
+        </div>
+        <div class="answer answer-border-top" (click)="pickOption('2')">
+          <!-- <div class="form-check ml-5">
+            <input [(ngModel)]="option" class="form-check-input" value="2" type="radio" name="options" id="answer2">
+            <label class="form-check-label" for="answer2">
+              {{question.option2}}
+            </label>
+          </div> -->
+          <mat-radio-button [value]="'2'"></mat-radio-button>
+          <span class="answer-text">{{question.option2}}</span>
         </div>
       </div>
-      <div class="col answer-border">
-        <div class="form-check">
-          <input [(ngModel)]="option" class="form-check-input" value="2" type="radio" name="options" id="answer2">
-          <label class="form-check-label" for="answer2">
-            {{question.option2}}
-          </label>
+      <div class="d-lg-flex">
+        <div class="answer answer-border-bottom" (click)="pickOption('3')">
+          <!-- <div class="form-check">
+            <input [(ngModel)]="option" class="form-check-input" value="3" type="radio" name="options" id="answer3">
+            <label class="form-check-label" for="answer3">
+              {{question.option3}}
+            </label>
+          </div> -->
+          <mat-radio-button [value]="'3'"></mat-radio-button>
+          <span class="answer-text">{{question.option3}}</span>
+        </div>
+        <div class="answer answer-border-bottom" (click)="pickOption('4')">
+          <!-- <div class="form-check">
+            <input [(ngModel)]="option" class="form-check-input" value="4" type="radio" name="options" id="answer4">
+            <label class="form-check-label" for="answer4">
+              {{question.option4}}
+            </label>
+          </div> -->
+          <mat-radio-button [value]="'4'"></mat-radio-button>
+          <span class="answer-text">{{question.option4}}</span>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col answer-border">
-        <div class="form-check">
-          <input [(ngModel)]="option" class="form-check-input" value="3" type="radio" name="options" id="answer3">
-          <label class="form-check-label" for="answer3">
-            {{question.option3}}
-          </label>
-        </div>
-      </div>
-      <div class="col answer-border">
-        <div class="form-check">
-          <input [(ngModel)]="option" class="form-check-input" value="4" type="radio" name="options" id="answer4">
-          <label class="form-check-label" for="answer4">
-            {{question.option4}}
-          </label>
-        </div>
-      </div>
-    </div>
+    </mat-radio-group>
   </div>
 </div>
 
