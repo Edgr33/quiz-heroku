@@ -19,7 +19,7 @@
     </thead>
     <tbody>
       <tr [class.goodScore]="score.score > 7"
-        [class.midScore]="(3 < score.score) && (score.score < 7)"
+        [class.midScore]="(3 < score.score) && (score.score < 8)"
         [class.badScore]="score.score < 4"
         *ngFor="let score of scoreList index as i">
         <!-- <th scope="row">{{ranking * i}}</th> -->

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  scores_url: 'http://localhost:88/app/scores'
+  scores_url: 'http://localhost:88/app/scores',
+  db_scores_url: 'http://localhost:88/app/dbscore'
 };
 
 /*

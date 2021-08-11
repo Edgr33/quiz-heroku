@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-// import { environment } from '../../environments/environment';
 import { environment } from '../../environments/environment';
 import { Score } from '../score.model';
 
@@ -16,11 +15,11 @@ export class ScoreService {
   ) { }
 
   getAllScores() {
-    return this.http.get<Score[]>(environment.scores_url)
+    return this.http.get<Score[]>(environment.db_scores_url)
   }
 
   createScore(score: Score) {
-    return this.http.post(environment.scores_url, score)
+    return this.http.post(environment.db_scores_url, score)
   }
 
 }
